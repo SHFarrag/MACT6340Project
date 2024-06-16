@@ -1,22 +1,86 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-
     <title>NFT Site</title>
-
     <meta name="description" content="A personal website to showcase NFTs">
-    <link rel="stylesheet" href="./style.css">
-
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
-    <button id="testButton">Click Me</button>
+    <div class="parallax-background">
+        <div class="animated-background">
+            <div class="floating-balls"></div>
+        </div>
+    </div>
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+            </button>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Main Start -->
+    <div class="main">
+        <!-- Home Section Start -->
+        <section class="home-section align-items-center">
+            <div class="container">
+            <div class="row align-items-center">
+            <div class="home-text">
+                <p>
+                    Hello, I'm
+                </p>
+                <h1>Saphia Farrag</h1>
+                <h2>Creative Technologist</h2>
+                <a href="#" class="btn">about me</a>
+                <a href="#" class="btn">portfolio</a>
+            </div>
+            <div class="home-img">
+        <div class="img-box">
+            <spline-viewer url="https://prod.spline.design/UvG5iFVt-eYcPsDZ/scene.splinecode"></spline-viewer>
+        </div>
+            </div>
+            </div>
+            </div>
+        </section>
+        <!-- Home Section End -->
+    </div>
+    <!-- Main End -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="./js/index.js"></script>
-</body>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.6.8/build/spline-viewer.js"></script>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.menu').classList.toggle('active');
+        });
 
+        // Creating bg balls
+        const container = document.querySelector('.floating-balls');
+        for (let i = 0; i < 20; i++) {
+            const ball = document.createElement('div');
+            ball.classList.add('ball');
+            container.appendChild(ball);
+
+            // Randomizing positions and animation duration
+            ball.style.left = `${Math.random() * 100}vw`;
+            ball.style.top = `${Math.random() * 100}vh`;
+            ball.style.animationDuration = `${5 + Math.random() * 10}s`;
+            ball.style.animationDelay = `${Math.random() * 5}s`;
+        }
+    </script>
+</body>
 </html>
