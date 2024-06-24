@@ -1,4 +1,12 @@
-
+window.addEventListener("loader", ()=>{
+  document.querySelector(".main").classList.remove("hidden");
+  document.querySelector(".home-section").classList.add("active");
+  /*------------ Page Loader ------------*/
+  document.querySelector(".page-loader").classList.add("fade-out");
+  setTimeout(() =>{
+    document.querySelector(".page-loader").computedStyleMap.display = "none";
+  },600);
+});
 
 /*----------------About Tabs -----------------*/
 const tabsContainer = document.querySelector(".about-tabs"),
@@ -13,6 +21,22 @@ tabsContainer.addEventListener("click", (e) =>{
         aboutSection.querySelector(target).classList.add("active");
     }
 });
+
+ /*-------- Smooth scroll for navigation links ----------*/
+ const navLinks = document.querySelectorAll('.nav-link');
+ navLinks.forEach(link => {
+     link.addEventListener('click', function (event) {
+         event.preventDefault();
+         const targetId = this.getAttribute('href').substring(1);
+         const targetSection = document.getElementById(targetId);
+
+         window.scrollTo({
+             top: targetSection.offsetTop - 70, // Adjust for fixed navbar height
+             behavior: 'smooth'
+         });
+     });
+ });
+
 
 /*----------------Portfolio Item Details Pop----------------*/
   document.addEventListener("click", (e) =>{

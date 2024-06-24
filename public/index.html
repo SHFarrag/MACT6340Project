@@ -14,6 +14,13 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <!--Page Loader Start-->
+    <div class="page-loader fade-out" style="display: none;">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <!--Page Loader End-->
     <div class="parallax-background">
         <div class="animated-background">
             <div class="floating-balls"></div>
@@ -36,8 +43,9 @@
     </nav>
     <!-- Main Start -->
     <div class="main">
+        
         <!-- Home Section Start -->
-        <section class="home-section align-items-center hidden">
+        <section class="home-section align-items-center" id="home">
             <div class="container">
             <div class="row align-items-center">
             <div class="home-text">
@@ -58,8 +66,8 @@
             </div>
         </section>
         <!-- Home Section End -->
-<!-- About Section Start -->
-<section class="about-section sec-padding">
+          <!-- About Section Start -->
+<section class="about-section sec-padding" id="about">
     <div class="container">
         <div class="row">
             <div class="section-title">
@@ -131,152 +139,211 @@
 </section>
 <!-- About Section End -->
 
-<!-- Projects Section Start -->
-<section class="portfolio-section sec-padding">
+<!-- Portfolio Section Start-->
+ <section class="portfolio-section sec-padding" id="projects">
     <div class="container">
         <div class="row">
-        <div class="section-title">
-            <h2> recent work</h2>
-
-        </div>
+            <div class="section-title">
+                <h2> recent work </h2>
+            </div>
         </div>
         <div class="row">
-          <!-- Projects Item Start -->
-           <div class="portfolio-item">
-            <div class="portfolio-item-thumbnail">
-                <img src="image" alt="portfolio item thumb">
-            </div>
-            <h3 class="portfolio-item-title">project 1</h3>
-            <button type="button" class="btn view-project-btn">view project</button>
-            <div class="portfolio-item-details">
-                <div class="description">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, eos distinctio. Libero, sequi vitae. Cum similique ipsam autem excepturi sunt et veritatis. Unde, numquam! Quod voluptatibus cum voluptas pariatur, expedita voluptate accusamus nihil ab saepe placeat animi. Voluptatem, fugiat maxime!</p>
-                </div>
-                <div class="general-info">
-                    <ul>
-                        <li>Price: <span>0.01ETH</span></li>
-                        <li>Quantity: <span>128</span></li>
-                        <li>Royalties:<span>10.00</span></li>
-                    </ul>
-                </div>
-            </div>
-           </div>
-           <!-- Projects Item End -->
             <!-- Projects Item Start -->
-           <div class="portfolio-item">
-            <div class="portfolio-item-thumbnail">
-                <img src="image" alt="portfolio item thumb">
-            </div>
-            <h3 class="portfolio-item-title">project 2</h3>
-            <button type="button" class="btn view-project-btn">view project</button>
-            <div class="portfolio-item-details">
-                <div class="description">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, eos distinctio. Libero, sequi vitae. Cum similique ipsam autem excepturi sunt et veritatis. Unde, numquam! Quod voluptatibus cum voluptas pariatur, expedita voluptate accusamus nihil ab saepe placeat animi. Voluptatem, fugiat maxime!</p>
-                </div>
-                <div class="general-info">
-                    <ul>
-                        <li>Price: <span>0.01ETH</span></li>
-                        <li>Quantity: <span>128</span></li>
-                        <li>Royalties:<span>10.00</span></li>
-                    </ul>
-                </div>
-            </div>
-           </div>
-           <!-- Projects Item End -->
+  <div class="portfolio-item">
+    <div class="portfolio-item-thumbnail">
+        <img src="image" alt="portfolio item thumb">
+    </div>
+    <h3 class="portfolio-item-title">project 1</h3>
+    <button type="button" class="btn view-project-btn">view project</button>
+    <div class="portfolio-item-details">
+        <div class="description">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, eos distinctio. Libero, sequi vitae. Cum similique ipsam autem excepturi sunt et veritatis. Unde, numquam! Quod voluptatibus cum voluptas pariatur, expedita voluptate accusamus nihil ab saepe placeat animi. Voluptatem, fugiat maxime!</p>
+        </div>
+        <div class="general-info">
+            <ul>
+                <li>Price: <span>0.01ETH</span></li>
+                <li>Quantity: <span>128</span></li>
+                <li>Royalties:<span>10.00</span></li>
+            </ul>
+        </div>
+    </div>
+   </div>
+   <!-- Projects Item End -->
+    <!-- Projects Item Start -->
+   <div class="portfolio-item">
+    <div class="portfolio-item-thumbnail">
+        <img src="image" alt="portfolio item thumb">
+    </div>
+    <h3 class="portfolio-item-title">project 2</h3>
+    <button type="button" class="btn view-project-btn">view project</button>
+    <div class="portfolio-item-details">
+        <div class="description">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, eos distinctio. Libero, sequi vitae. Cum similique ipsam autem excepturi sunt et veritatis. Unde, numquam! Quod voluptatibus cum voluptas pariatur, expedita voluptate accusamus nihil ab saepe placeat animi. Voluptatem, fugiat maxime!</p>
+        </div>
+        <div class="general-info">
+            <ul>
+                <li>Price: <span>0.01ETH</span></li>
+                <li>Quantity: <span>128</span></li>
+                <li>Royalties:<span>10.00</span></li>
+            </ul>
+        </div>
+    </div>
+   </div>
+   <!-- Projects Item End -->
+    <!-- Projects Item Start -->
+   <div class="portfolio-item">
+    <div class="portfolio-item-thumbnail">
+        <img src="image" alt="portfolio item thumb">
+    </div>
+    <h3 class="portfolio-item-title">project 3</h3>
+    <button type="button" class="btn view-project-btn">view project</button>
+    <div class="portfolio-item-details">
+        <div class="description">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, eos distinctio. Libero, sequi vitae. Cum similique ipsam autem excepturi sunt et veritatis. Unde, numquam! Quod voluptatibus cum voluptas pariatur, expedita voluptate accusamus nihil ab saepe placeat animi. Voluptatem, fugiat maxime!</p>
+        </div>
+        <div class="general-info">
+            <ul>
+                <li>Price: <span>0.01ETH</span></li>
+                <li>Quantity: <span>128</span></li>
+                <li>Royalties:<span>10.00</span></li>
+            </ul>
+        </div>
+    </div>
+   </div>
+   <!-- Projects Item End -->
+        </div>
+        <div class="row">
             <!-- Projects Item Start -->
-           <div class="portfolio-item">
-            <div class="portfolio-item-thumbnail">
-                <img src="image" alt="portfolio item thumb">
+  <div class="portfolio-item">
+    <div class="portfolio-item-thumbnail">
+        <img src="image" alt="portfolio item thumb">
+    </div>
+    <h3 class="portfolio-item-title">project 1</h3>
+    <button type="button" class="btn view-project-btn">view project</button>
+    <div class="portfolio-item-details">
+        <div class="description">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, eos distinctio. Libero, sequi vitae. Cum similique ipsam autem excepturi sunt et veritatis. Unde, numquam! Quod voluptatibus cum voluptas pariatur, expedita voluptate accusamus nihil ab saepe placeat animi. Voluptatem, fugiat maxime!</p>
+        </div>
+        <div class="general-info">
+            <ul>
+                <li>Price: <span>0.01ETH</span></li>
+                <li>Quantity: <span>128</span></li>
+                <li>Royalties:<span>10.00</span></li>
+            </ul>
+        </div>
+    </div>
+   </div>
+   <!-- Projects Item End -->
+    <!-- Projects Item Start -->
+   <div class="portfolio-item">
+    <div class="portfolio-item-thumbnail">
+        <img src="image" alt="portfolio item thumb">
+    </div>
+    <h3 class="portfolio-item-title">project 2</h3>
+    <button type="button" class="btn view-project-btn">view project</button>
+    <div class="portfolio-item-details">
+        <div class="description">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, eos distinctio. Libero, sequi vitae. Cum similique ipsam autem excepturi sunt et veritatis. Unde, numquam! Quod voluptatibus cum voluptas pariatur, expedita voluptate accusamus nihil ab saepe placeat animi. Voluptatem, fugiat maxime!</p>
+        </div>
+        <div class="general-info">
+            <ul>
+                <li>Price: <span>0.01ETH</span></li>
+                <li>Quantity: <span>128</span></li>
+                <li>Royalties:<span>10.00</span></li>
+            </ul>
+        </div>
+    </div>
+   </div>
+   <!-- Projects Item End -->
+    <!-- Projects Item Start -->
+   <div class="portfolio-item">
+    <div class="portfolio-item-thumbnail">
+        <img src="image" alt="portfolio item thumb">
+    </div>
+    <h3 class="portfolio-item-title">project 3</h3>
+    <button type="button" class="btn view-project-btn">view project</button>
+    <div class="portfolio-item-details">
+        <div class="description">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, eos distinctio. Libero, sequi vitae. Cum similique ipsam autem excepturi sunt et veritatis. Unde, numquam! Quod voluptatibus cum voluptas pariatur, expedita voluptate accusamus nihil ab saepe placeat animi. Voluptatem, fugiat maxime!</p>
+        </div>
+        <div class="general-info">
+            <ul>
+                <li>Price: <span>0.01ETH</span></li>
+                <li>Quantity: <span>128</span></li>
+                <li>Royalties:<span>10.00</span></li>
+            </ul>
+        </div>
+    </div>
+   </div>
+   <!-- Projects Item End -->
+        </div>
+    </div>
+ </section>
+   <!-- Projects Item End -->
+    
+     <!-- Contact Section Start -->
+ <section class="contact-section sec-padding" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="section-title">
+                <h2>contact me</h2>
             </div>
-            <h3 class="portfolio-item-title">project 3</h3>
-            <button type="button" class="btn view-project-btn">view project</button>
-            <div class="portfolio-item-details">
-                <div class="description">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, eos distinctio. Libero, sequi vitae. Cum similique ipsam autem excepturi sunt et veritatis. Unde, numquam! Quod voluptatibus cum voluptas pariatur, expedita voluptate accusamus nihil ab saepe placeat animi. Voluptatem, fugiat maxime!</p>
-                </div>
-                <div class="general-info">
-                    <ul>
-                        <li>Price: <span>0.01ETH</span></li>
-                        <li>Quantity: <span>128</span></li>
-                        <li>Royalties:<span>10.00</span></li>
-                    </ul>
-                </div>
+        </div>
+        <div class="row">
+            <div class="contact-form">
+                <form>
+                    <div class="row">
+                        <div class="input-group">
+                            <input type="text" placeholder="Name" class="input-control" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group">
+                            <input type="text" placeholder="Email" class="input-control" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group">
+                            <input type="text" placeholder="Subject" class="input-control" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group">
+                            <textarea placeholder="Message" class="input-control" required></textarea>
+                        </div>
+                        <div class="submit-btn">
+                            <button type="submit" class="btn">send message</button>
+                        </div>
+                    </div>
+                </form>
             </div>
-           </div>
-           <!-- Projects Item End -->
-            <!-- Projects Item Start -->
-           <div class="portfolio-item">
-            <div class="portfolio-item-thumbnail">
-                <img src="image" alt="portfolio item thumb">
-            </div>
-            <h3 class="portfolio-item-title">project 4</h3>
-            <button type="button" class="btn view-project-btn">view project</button>
-            <div class="portfolio-item-details">
-                <div class="description">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, eos distinctio. Libero, sequi vitae. Cum similique ipsam autem excepturi sunt et veritatis. Unde, numquam! Quod voluptatibus cum voluptas pariatur, expedita voluptate accusamus nihil ab saepe placeat animi. Voluptatem, fugiat maxime!</p>
+            <div class="contact-info">
+                <div class="contact-info-item">
+                  <h3>Email</h3>
+                  <p>saphia.h.farrag@gmail.com</p>  
                 </div>
-                <div class="general-info">
-                    <ul>
-                        <li>Price: <span>0.01ETH</span></li>
-                        <li>Quantity: <span>128</span></li>
-                        <li>Royalties:<span>10.00</span></li>
-                    </ul>
-                </div>
+                <div class="contact-info-item">
+                    <h3>Phone</h3>
+                    <p>(832) 613 3423</p>  
+                  </div>
+                  <div class="contact-info-item">
+                    <h3>follow me</h3>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>  
+                  </div>
             </div>
-           </div>
-           <!-- Projects Item End -->
-            <!-- Projects Item Start -->
-           <div class="portfolio-item">
-            <div class="portfolio-item-thumbnail">
-                <img src="image" alt="portfolio item thumb">
-            </div>
-            <h3 class="portfolio-item-title">project 5</h3>
-            <button type="button" class="btn view-project-btn">view project</button>
-            <div class="portfolio-item-details">
-                <div class="description">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, eos distinctio. Libero, sequi vitae. Cum similique ipsam autem excepturi sunt et veritatis. Unde, numquam! Quod voluptatibus cum voluptas pariatur, expedita voluptate accusamus nihil ab saepe placeat animi. Voluptatem, fugiat maxime!</p>
-                </div>
-                <div class="general-info">
-                    <ul>
-                        <li>Price: <span>0.01ETH</span></li>
-                        <li>Quantity: <span>128</span></li>
-                        <li>Royalties:<span>10.00</span></li>
-                    </ul>
-                </div>
-            </div>
-           </div>
-           <!-- Projects Item End -->
-            <!-- Projects Item Start -->
-           <div class="portfolio-item">
-            <div class="portfolio-item-thumbnail">
-                <img src="image" alt="portfolio item thumb">
-            </div>
-            <h3 class="portfolio-item-title">project 6</h3>
-            <button type="button" class="btn view-project-btn">view project</button>
-            <div class="portfolio-item-details">
-                <div class="description">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, eos distinctio. Libero, sequi vitae. Cum similique ipsam autem excepturi sunt et veritatis. Unde, numquam! Quod voluptatibus cum voluptas pariatur, expedita voluptate accusamus nihil ab saepe placeat animi. Voluptatem, fugiat maxime!</p>
-                </div>
-                <div class="general-info">
-                    <ul>
-                        <li>Price: <span>0.01ETH</span></li>
-                        <li>Quantity: <span>128</span></li>
-                        <li>Royalties:<span>10.00</span></li>
-                    </ul>
-                </div>
-            </div>
-           </div>
-           <!-- Projects Item End -->
         </div>
     </div>
 </section>
-
-<!-- Projects Section End -->
+<!-- Contact Section End -->
 
     </div>
     <!-- Main End -->
      <!-- Projects Item Details Popup Start -->
-      <div class="portfolio-popup">
+     <div class="portfolio-popup">
         <div class="pp-inner">
             <div class="pp-content">
                 <div class="pp-header">
@@ -304,8 +371,7 @@
         </div>
       </div>
     <!-- Projects Item Details Popup End -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="./js/script.js"></script>
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.6.8/build/spline-viewer.js"></script>
     <script>
