@@ -291,28 +291,28 @@
         </div>
         <div class="row">
             <div class="contact-form">
-                <form>
+                <form id="contact-form">
                     <div class="row">
                         <div class="input-group">
-                            <input type="text" placeholder="Name" class="input-control" required>
+                            <input type="text" placeholder="Name" class="input-control" id="name" name="name" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-group">
-                            <input type="text" placeholder="Email" class="input-control" required>
+                            <input type="email" placeholder="Email" class="input-control" id="email" name="email" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-group">
-                            <input type="text" placeholder="Subject" class="input-control" required>
+                            <input type="text" placeholder="Subject" class="input-control" id="subject" name="subject" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-group">
-                            <textarea placeholder="Message" class="input-control" required></textarea>
+                            <textarea placeholder="Message" class="input-control" id="message" name="message" required></textarea>
                         </div>
                         <div class="submit-btn">
-                            <button type="submit" class="btn">send message</button>
+                            <button type="submit" class="btn">Send Message</button>
                         </div>
                     </div>
                 </form>
@@ -372,7 +372,7 @@
       </div>
     <!-- Projects Item Details Popup End -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="module" src="./js/script.js"></script>
+    <script type="module" src="./js/index.js"></script>
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.6.8/build/spline-viewer.js"></script>
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', () => {
@@ -392,6 +392,29 @@
             ball.style.animationDuration = `${5 + Math.random() * 10}s`;
             ball.style.animationDelay = `${Math.random() * 5}s`;
         }
+    </script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+
+            fetch('/mail', {
+                method: 'POST',
+                body: JSON.stringify(Object.fromEntries(formData)),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.text())
+            .then(result => {
+                alert(result);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Failed to send message. Please try again later.');
+            });
+        });
     </script>
 </body>
 </html>

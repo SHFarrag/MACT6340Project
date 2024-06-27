@@ -74,3 +74,16 @@ tabsContainer.addEventListener("click", (e) =>{
   }
 
 
+  /*-------- Contact Form ------------*/
+  (function(){
+    "use strict";
+
+    document
+    .querySelector("submit-btn")
+    .addEventListener("click", submitMail);
+  
+  function submitMail(){
+    console.log("You clicked the submit button");
+  }
+})();
+
