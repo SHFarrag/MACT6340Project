@@ -7,8 +7,22 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
+let data = ["Project 1","Project 2","Project 3"];
+
 const app = express();
 const port = 3000;
+app.set("view engine","ejs");
+app.use(express.json());
+app.use(express.static("public"));
+
+app.get("/", (req,res) => {
+    res.render("index.ejs");
+});
+
+app.get('/projects', (req, res) => {
+    res.render('projects', { projectArray: data});
+});
+
 
 // Define __dirname for ES module
 const __filename = fileURLToPath(import.meta.url);
@@ -56,3 +70,4 @@ app.post("/mail", (req, res) => {
 app.listen(port, () => {
     console.log(`App running @ http://localhost:${port}`);
 });
+

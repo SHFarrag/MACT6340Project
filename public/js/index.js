@@ -7,20 +7,7 @@ window.addEventListener("loader", ()=>{
       document.querySelector(".page-loader").computedStyleMap.display = "none";
     },600);
   });
-  
-  /*----------------About Tabs -----------------*/
-  const tabsContainer = document.querySelector(".about-tabs"),
-  aboutSection = document.querySelector(".about-section");
-  
-  tabsContainer.addEventListener("click", (e) =>{
-      if(e.classList.contains("tab-item") && !e.target.classList.contains("active")){
-          tabsContainer.querySelector(".active").classList.remove("active");
-          e.target.classList.add("active");
-          const target = e.target.getAttribute("data-target");
-          aboutSection.querySelector(".tab-content.active").classList.remove("active");
-          aboutSection.querySelector(target).classList.add("active");
-      }
-  });
+
   
    /*-------- Smooth scroll for navigation links ----------*/
    const navLinks = document.querySelectorAll('.nav-link');
@@ -39,39 +26,52 @@ window.addEventListener("loader", ()=>{
   
   
   /*----------------Portfolio Item Details Pop----------------*/
-    document.addEventListener("click", (e) =>{
-      if(e.target.classList.contains("view-project-btn")){
-          togglePortfolioPopup();
-          document.querySelector(".portfolio-popup").scrollTo(0,0);
-          portfolioItemDetails(e.target.parentElement);
-      }
-    })
-  
-    function togglePortfolioPopup(){
-      document.querySelector(".portfolio-popup").classList.toggle("open");
-      document.body.classList.toggle("hide-scrolling");
-      document.querySelector(".main").classList.toggle("fade-out");
-    }
-  
-    document.querySelector(".pp-close").addEventListener("click", togglePortfolioPopup);
-  
-    // hide popup when clicking outside
-    document.addEventListener("click", (e) =>{
-      if(e.target.classList.contains("pp-inner")){
-          togglePortfolioPopup();
-      }
-    })
-  
-    function portfolioItemDetails(portfolioItem){
-      document.querySelector("pp-thumbnail img").src =
-      portfolioItem.querySelector(".portfolio-item-thumbnail img").src;
-  
-      document.querySelector(".pp-header h3").innerHTML =
-      portfolioItem.querySelector(".portfolio-item-title").innerHTML;
-  
-      document.querySelector(".pp-body").innerHTML=
-      portfolioItem.querySelector(".portfolio-item-details").innerHTML;
-    }
+// Event listener for the "view project" button
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("view-project-btn")) {
+      togglePortfolioPopup();
+      document.querySelector(".portfolio-popup").scrollTo(0, 0);
+      portfolioItemDetails(e.target.parentElement);
+  }
+});
+
+// Function to toggle portfolio popup visibility
+function togglePortfolioPopup() {
+  const portfolioPopup = document.querySelector(".portfolio-popup");
+  portfolioPopup.classList.toggle("open");
+  document.body.classList.toggle("hide-scrolling");
+  document.querySelector(".main").classList.toggle("fade-out");
+}
+
+// Event listener for closing the popup
+document.querySelector(".pp-close").addEventListener("click", togglePortfolioPopup);
+
+// Event listener to close popup when clicking outside of it
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("pp-inner")) {
+      togglePortfolioPopup();
+  }
+});
+
+// Function to populate portfolio item details in the popup
+function portfolioItemDetails(portfolioItem) {
+  const thumbnailSrc = portfolioItem.querySelector(".portfolio-item-thumbnail img").src;
+  const title = portfolioItem.querySelector(".portfolio-item-title").textContent;
+  const detailsHTML = portfolioItem.querySelector(".portfolio-item-details").innerHTML;
+
+  // Update popup thumbnail image
+  const popupThumbnailImg = document.querySelector(".pp-thumbnail img");
+  popupThumbnailImg.src = thumbnailSrc;
+  popupThumbnailImg.alt = title;
+
+  // Update popup header title
+  document.querySelector(".pp-header h3").textContent = title;
+
+  // Update popup body with portfolio item details
+  const ppBody = document.querySelector(".pp-body");
+  ppBody.innerHTML = ''; // Clear existing content
+  ppBody.innerHTML = detailsHTML;
+}
   
   
     /*-------- Contact Form ------------*/
@@ -85,3 +85,14 @@ window.addEventListener("loader", ()=>{
       console.log("You clicked the submit button");
     }
   })();
+
+  /*------------Menu Toggle --------------*/
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+
+    menuToggle.addEventListener('click', function() {
+        menu.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+    });
+});
