@@ -7,11 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="public/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <title>NFT Site</title>
     <meta name="description" content="A personal website to showcase NFTs">
-    <link rel="stylesheet" href="./css/font-awesome.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <!--Page Loader Start-->
@@ -26,239 +25,210 @@
             <div class="floating-balls"></div>
         </div>
     </div>
- <!-- Header area -->
- <%- include('header'); %>
-<!-- Main Content -->
-<section class="main">
     
-    <!-- Home Section -->
-    <section class="home-section align-items-center" id="home">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="home-text">
-                    <p>Hello, I'm</p>
-                    <h1>Saphia Farrag</h1>
-                    <h2>Creative Technologist</h2>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Home Section -->
+    <!-- Header area -->
+    <%- include('header'); %>
 
-<!-- Portfolio Section Start-->
- <section class="portfolio-section sec-padding" id="projects">
-    <div class="container">
-        <div class="row">
-            <div class="section-title">
-                <h2> Projects </h2>
-            </div>
-        </div>
-        <div class="row">
-            <!-- Projects Item Start -->
-  <div class="portfolio-item">
-    <div class="portfolio-item-thumbnail">
-        <img src="/public/images/diffReact.png" alt="portfolio item thumb">
-    </div>
-    <h3 class="portfolio-item-title">project 1</h3>
-    <button type="button" class="btn view-project-btn">view project</button>
-    <div class="portfolio-item-details">
-        <div class="description">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, eos distinctio. Libero, sequi vitae. Cum similique ipsam autem excepturi sunt et veritatis. Unde, numquam! Quod voluptatibus cum voluptas pariatur, expedita voluptate accusamus nihil ab saepe placeat animi. Voluptatem, fugiat maxime!</p>
-        </div>
-        <div class="general-info">
-            <ul>
-                <li>Price: <span>0.01ETH</span></li>
-                <li>Quantity: <span>128</span></li>
-                <li>Royalties:<span>10.00</span></li>
-            </ul>
-        </div>
-    </div>
-   </div>
-   <!-- Projects Item End -->
-    <!-- Projects Item Start -->
-   <div class="portfolio-item">
-    <div class="portfolio-item-thumbnail">
-        <img src="/public/images/purpleOrangeWidget.png" alt="portfolio item thumb">
-    </div>
-    <h3 class="portfolio-item-title">project 2</h3>
-    <button type="button" class="btn view-project-btn">view project</button>
-    <div class="portfolio-item-details">
-        <div class="description">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, eos distinctio. Libero, sequi vitae. Cum similique ipsam autem excepturi sunt et veritatis. Unde, numquam! Quod voluptatibus cum voluptas pariatur, expedita voluptate accusamus nihil ab saepe placeat animi. Voluptatem, fugiat maxime!</p>
-        </div>
-        <div class="general-info">
-            <ul>
-                <li>Price: <span>0.01ETH</span></li>
-                <li>Quantity: <span>128</span></li>
-                <li>Royalties:<span>10.00</span></li>
-            </ul>
-        </div>
-    </div>
-   </div>
-   <!-- Projects Item End -->
-    <!-- Projects Item Start -->
-   <div class="portfolio-item">
-    <div class="portfolio-item-thumbnail">
-        <img src="/public/images/satellite.jpg" alt="portfolio item thumb">
-    </div>
-    <h3 class="portfolio-item-title">project 3</h3>
-    <button type="button" class="btn view-project-btn">view project</button>
-    <div class="portfolio-item-details">
-        <div class="description">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, eos distinctio. Libero, sequi vitae. Cum similique ipsam autem excepturi sunt et veritatis. Unde, numquam! Quod voluptatibus cum voluptas pariatur, expedita voluptate accusamus nihil ab saepe placeat animi. Voluptatem, fugiat maxime!</p>
-        </div>
-        <div class="general-info">
-            <ul>
-                <li>Price: <span>0.01ETH</span></li>
-                <li>Quantity: <span>128</span></li>
-                <li>Royalties:<span>10.00</span></li>
-            </ul>
-        </div>
-    </div>
-   </div>
-   <!-- Projects Item End -->
-        </div>
-        <div class="row">
-            <a href="/projects"><button type="button" class="btn portfolio-button">See All Projects</button></a>
-        </div>
+    <!-- Main Content -->
+    <section class="main">
         
-        </div>
-    </div>
- </section>
-   <!-- Projects Section End -->
-    
-     <!-- Contact Section Start -->
- <section class="contact-section sec-padding" id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="section-title">
-                <h2>contact me</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="contact-form">
-                <form id="contact-form">
-                    <div class="row">
-                        <div class="input-group">
-                            <input type="text" placeholder="Name" class="input-control" id="name" name="name" required>
-                        </div>
+        <!-- Home Section -->
+        <section class="home-section align-items-center" id="home">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="home-text">
+                        <p>Hello, I'm</p>
+                        <h1>Saphia Farrag</h1>
+                        <h2>Creative Technologist</h2>
                     </div>
-                    <div class="row">
-                        <div class="input-group">
-                            <input type="email" placeholder="Email" class="input-control" id="email" name="email" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-group">
-                            <input type="text" placeholder="Subject" class="input-control" id="subject" name="subject" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-group">
-                            <textarea placeholder="Message" class="input-control" id="message" name="message" required></textarea>
-                        </div>
-                        <div class="submit-btn">
-                            <button type="submit" class="btn">Send Message</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="contact-info">
-                <div class="contact-info-item">
-                  <h3>Email</h3>
-                  <p>saphia.h.farrag@gmail.com</p>  
-                </div>
-                <div class="contact-info-item">
-                    <h3>Phone</h3>
-                    <p>(832) 613 3423</p>  
-                  </div>
-                  <div class="contact-info-item">
-                    <h3>follow me</h3>
-                    <div class="social-links">
-                        <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
-                        <a href="#" target="_blank"><i class="bi bi-tiktok"></i></a>
-                    </div>  
-                  </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Contact Section End -->
- <!-- About Section Start -->
-<section class="about-section" id="about">
-    <div class="about-container about-sec-padding">
-        <div class="row">
-            <div class="section-title">
-                <h2>about me</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="about-img">
-                <div class="img-box">
-                    <spline-viewer url="https://prod.spline.design/UvG5iFVt-eYcPsDZ/scene.splinecode"></spline-viewer>
                 </div>
             </div>
-            <div class="about-text">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam maiores sapiente, nisi officia molestiae earum, deserunt commodi, nemo ad quisquam labore mollitia veritatis? Excepturi amet aspernatur ex! Qui aliquam assumenda earum expedita vero. Omnis vero perspiciatis neque eaque aspernatur sequi quidem consequuntur vitae? Modi consequatur assumenda minus, voluptates non quae.</p>
-                <a href="#" class="btn">resume</a>
-                 <a href="#contact" class="btn">contact</a>
-            </div>
-        </div>
-    </div>
-     <!-- Footer area -->
-     <%- include('footer'); %>
-</section>
-<!-- About Section End -->
-</section>
+        </section>
+        <!-- End Home Section -->
 
+        <!-- Portfolio Section Start -->
+        <section class="portfolio-section sec-padding" id="projects">
+            <div class="container">
+                <div class="row">
+                    <div class="section-title">
+                        <h2>Projects</h2>
+                    </div>
+                </div>
+                <!-- Conditional Rendering based on projectArray -->
+                <div class="row">
+                    <% if (projectArray.length > 0) { %>
+                        <% projectArray.forEach(project => { %>
+                            <!-- Projects Item Start -->
+                            <div class="portfolio-item">
+                                <div class="portfolio-item-thumbnail">
+                                    <img src="<%= project.img_url %>" alt="portfolio item thumb">
+                                </div>
+                                <h3 class="portfolio-item-title"><%= project.project_name %></h3>
+                                <button type="button" class="btn view-project-btn" data-project-id="<%= project.id %>">View Project</button>
+                                <div class="portfolio-item-details">
+                                    <div class="description">
+                                        <p><%= project.project_description %></p>
+                                    </div>
+                                    <div class="general-info">
+                                        <ul>
+                                            <li>Price: <%= project.price_eth %> ETH</li>
+                                            <li>Quantity: <%= project.quantity %></li>
+                                            <li>Royalties: <%= project.royalty_percent %>%</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Projects Item End -->
+                        <% }); %>
+                    <% } else { %>
+                        <p>No projects found.</p>
+                    <% } %>
+                </div>
+                <!-- End Conditional Rendering -->
+            </div>
+            <div class="row">
+                <a href="/views/projects.ejs"><button type="button" class="btn portfolio-button">See All Projects</button></a>
+            </div>
+            
+            </div>
+            </div>
+        </section>
+        <!-- Projects Section End -->
+
+        <!-- Contact Section Start -->
+        <section class="contact-section sec-padding" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="section-title">
+                        <h2>Contact Me</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="contact-form">
+                        <form id="contact-form" action="/mail" method="post">
+                            <div class="row">
+                                <div class="input-group">
+                                    <input type="text" placeholder="Name" class="input-control" id="name" name="name" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-group">
+                                    <input type="email" placeholder="Email" class="input-control" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-group">
+                                    <input type="text" placeholder="Subject" class="input-control" id="subject" name="subject" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-group">
+                                    <textarea placeholder="Message" class="input-control" id="message" name="message" required></textarea>
+                                </div>
+                                <div class="submit-btn">
+                                    <button type="submit" class="btn">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <div class="contact-info-item">
+                            <h3>Email</h3>
+                            <p>saphia.h.farrag@gmail.com</p>  
+                        </div>
+                        <div class="contact-info-item">
+                            <h3>Phone</h3>
+                            <p>(832) 613 3423</p>  
+                        </div>
+                        <div class="contact-info-item">
+                            <h3>Follow Me</h3>
+                            <div class="social-links">
+                                <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+                                <a href="#" target="_blank"><i class="bi bi-tiktok"></i></a>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section End -->
+        
+        <!-- About Section Start -->
+        <section class="about-section" id="about">
+            <div class="about-container about-sec-padding">
+                <div class="row">
+                    <div class="section-title">
+                        <h2>About Me</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="about-img">
+                        <div class="img-box">
+                            <spline-viewer url="https://prod.spline.design/UvG5iFVt-eYcPsDZ/scene.splinecode"></spline-viewer>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam maiores sapiente, nisi officia molestiae earum, deserunt commodi, nemo ad quisquam labore mollitia veritatis? Excepturi amet aspernatur ex! Qui aliquam assumenda earum expedita vero. Omnis vero perspiciatis neque eaque aspernatur sequi quidem consequuntur vitae? Modi consequatur assumenda minus, voluptates non quae.</p>
+                        <a href="#" class="btn">Resume</a>
+                        <a href="#contact" class="btn">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section End -->
+        
+        <!-- Footer area -->
+        <% include('footer'); %>
+        
+    </section>
     <!-- Main End -->
-     <!-- Projects Item Details Popup Start -->
-     <div class="portfolio-popup">
+
+    <!-- Portfolio Item Details Popup -->
+    <div class="portfolio-popup">
         <div class="pp-inner">
             <div class="pp-content">
                 <div class="pp-header">
-                    <button type="button" class="btn pp-close"><i class="fa-solid fa-x"></i></button>
+                    <button type="button" class="btn pp-close"><i class="bi bi-x"></i></button>
                   <div class="pp-thumbnail">
-                    <img src="./public/images/diffReact.png" alt="pp-thumbnail">
-                  </div> 
-                  <h3>Project Title</h3>
+                    <img src="" alt="portfolio item thumb">
                 </div>
-                <div class="pp-body">
-                    <div class="portfolio-item-details">
-                        <div class="description">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, eos distinctio. Libero, sequi vitae. Cum similique ipsam autem excepturi sunt et veritatis. Unde, numquam! Quod voluptatibus cum voluptas pariatur, expedita voluptate accusamus nihil ab saepe placeat animi. Voluptatem, fugiat maxime!</p>
-                        </div>
-                        <div class="general-info">
-                            <ul>
-                                <li>Price: <span>0.01ETH</span></li>
-                                <li>Quantity: <span>128</span></li>
-                                <li>Royalties:<span>10.00</span></li>
-                            </ul>
-                        </div>
-                    </div>  
+                <h3 class="portfolio-item-title"></h3>
+                <div class="portfolio-item-details">
+                    <div class="description">
+                        
+                    </div>
+                    <div class="general-info">
+                        <ul>
+                            <li>Price: ETH</li>
+                            <li>Quantity: </li>
+                            <li>Royalties: %</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-      </div>
+    </div>
     <!-- Projects Item Details Popup End -->
+    
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="/js/index.js"></script>
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.6.8/build/spline-viewer.js"></script>
     <script>
+        // Toggle menu function
         document.querySelector('.menu-toggle').addEventListener('click', () => {
             document.querySelector('.menu').classList.toggle('active');
         });
 
-        // Creating bg balls
+        // Creating background balls
         const container = document.querySelector('.floating-balls');
         for (let i = 0; i < 20; i++) {
             const ball = document.createElement('div');
             ball.classList.add('ball');
             container.appendChild(ball);
-
-            // Randomizing positions and animation duration
             ball.style.left = `${Math.random() * 100}vw`;
             ball.style.top = `${Math.random() * 100}vh`;
             ball.style.animationDuration = `${5 + Math.random() * 10}s`;
@@ -266,26 +236,33 @@
         }
     </script>
     <script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
+        // Form submission handling with fetch API
+        document.getElementById("contact-form").addEventListener("submit", async function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            const form = event.target;
+            const formData = new FormData(form);
+            const formObj = Object.fromEntries(formData.entries());
 
-            const formData = new FormData(this);
+            try {
+                const response = await fetch("/mail", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(formObj)
+                });
 
-            fetch('/mail', {
-                method: 'POST',
-                body: JSON.stringify(Object.fromEntries(formData)),
-                headers: {
-                    'Content-Type': 'application/json'
+                if (response.ok) {
+                    alert("Message sent successfully!");
+                    form.reset(); // Reset the form on successful submission
+                } else {
+                    const errorText = await response.text();
+                    alert("Failed to send message: " + errorText);
                 }
-            })
-            .then(response => response.text())
-            .then(result => {
-                alert(result);
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Failed to send message. Please try again later.');
-            });
+            } catch (error) {
+                console.error("Error sending message:", error);
+                alert("Failed to send message: " + error.message);
+            }
         });
     </script>
 </body>

@@ -1,0 +1,30 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="public/images/favicon.ico">
+    <title>NFT Site</title>
+    <meta name="description" content="A personal website to showcase NFTs">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <%- include('header'); %>
+    <div class="container justify-content-center text-center">
+      <div class="spacer"></div>
+      <h1>An error occurred!</h1>
+      <div><%=msg %></div>
+      <a href="/">Home</a>
+    </div>
+    <div class="container-fluid">
+      <%- include('footer'); %>
+    </div>
+    <script type="module" src="./js/index.js"></script>
+  </body>
+  
+  </html>

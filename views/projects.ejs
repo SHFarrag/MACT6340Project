@@ -10,7 +10,6 @@
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
     <title>NFT Site</title>
     <meta name="description" content="A personal website to showcase NFTs">
-    <link rel="stylesheet" href="./css/font-awesome.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -31,147 +30,54 @@
 <!-- Main Content -->
 <section class="main">
 
-<!-- Portfolio Section Start-->
-<section class="portfolio-section-main sec-padding" id="projects">
+<!-- Portfolio Section Start -->
+<section class="portfolio-section sec-padding" id="projects">
     <div class="container">
         <div class="row">
             <div class="section-title">
-                <h2> Projects </h2>
+                <h2>Projects</h2>
             </div>
         </div>
+        <!-- Conditional Rendering based on projectArray -->
         <div class="row">
-            <!-- Projects Item Start -->
-  <div class="portfolio-item">
-    <div class="portfolio-item-thumbnail">
-        <img src="image" alt="portfolio item thumb">
+            <% if (projectArray.length > 0) { %>
+                <% projectArray.forEach(project => { %>
+                    <!-- Projects Item Start -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-thumbnail">
+                            <img src="<%= project.img_url %>" alt="portfolio item thumb">
+                        </div>
+                        <h3 class="portfolio-item-title"><%= project.project_name %></h3>
+                        <button type="button" class="btn view-project-btn" data-project-id="<%= project.id %>">View Project</button>
+                        <div class="portfolio-item-details">
+                            <div class="description">
+                                <p><%= project.project_description %></p>
+                            </div>
+                            <div class="general-info">
+                                <ul>
+                                    <li>Price: <%= project.price_eth %> ETH</li>
+                                    <li>Quantity: <%= project.quantity %></li>
+                                    <li>Royalties: <%= project.royalty_percent %>%</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Projects Item End -->
+                <% }); %>
+            <% } else { %>
+                <p>No projects found.</p>
+            <% } %>
+        </div>
+        <!-- End Conditional Rendering -->
     </div>
-    <h3 class="portfolio-item-title">project 1</h3>
-    <button type="button" class="btn view-project-btn">view project</button>
-    <div class="portfolio-item-details">
-        <div class="description">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, eos distinctio. Libero, sequi vitae. Cum similique ipsam autem excepturi sunt et veritatis. Unde, numquam! Quod voluptatibus cum voluptas pariatur, expedita voluptate accusamus nihil ab saepe placeat animi. Voluptatem, fugiat maxime!</p>
-        </div>
-        <div class="general-info">
-            <ul>
-                <li>Price: <span>0.01ETH</span></li>
-                <li>Quantity: <span>128</span></li>
-                <li>Royalties:<span>10.00</span></li>
-            </ul>
-        </div>
+    <div class="row">
+        <a href="/views/projects.ejs"><button type="button" class="btn portfolio-button">See All Projects</button></a>
     </div>
-   </div>
-   <!-- Projects Item End -->
-    <!-- Projects Item Start -->
-   <div class="portfolio-item">
-    <div class="portfolio-item-thumbnail">
-        <img src="image" alt="portfolio item thumb">
+    
     </div>
-    <h3 class="portfolio-item-title">project 2</h3>
-    <button type="button" class="btn view-project-btn">view project</button>
-    <div class="portfolio-item-details">
-        <div class="description">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, eos distinctio. Libero, sequi vitae. Cum similique ipsam autem excepturi sunt et veritatis. Unde, numquam! Quod voluptatibus cum voluptas pariatur, expedita voluptate accusamus nihil ab saepe placeat animi. Voluptatem, fugiat maxime!</p>
-        </div>
-        <div class="general-info">
-            <ul>
-                <li>Price: <span>0.01ETH</span></li>
-                <li>Quantity: <span>128</span></li>
-                <li>Royalties:<span>10.00</span></li>
-            </ul>
-        </div>
     </div>
-   </div>
-   <!-- Projects Item End -->
-    <!-- Projects Item Start -->
-   <div class="portfolio-item">
-    <div class="portfolio-item-thumbnail">
-        <img src="image" alt="portfolio item thumb">
-    </div>
-    <h3 class="portfolio-item-title">project 3</h3>
-    <button type="button" class="btn view-project-btn">view project</button>
-    <div class="portfolio-item-details">
-        <div class="description">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, eos distinctio. Libero, sequi vitae. Cum similique ipsam autem excepturi sunt et veritatis. Unde, numquam! Quod voluptatibus cum voluptas pariatur, expedita voluptate accusamus nihil ab saepe placeat animi. Voluptatem, fugiat maxime!</p>
-        </div>
-        <div class="general-info">
-            <ul>
-                <li>Price: <span>0.01ETH</span></li>
-                <li>Quantity: <span>128</span></li>
-                <li>Royalties:<span>10.00</span></li>
-            </ul>
-        </div>
-    </div>
-   </div>
-   <!-- Projects Item End -->
-        </div>
-        <div class="row">
-            <!-- Projects Item Start -->
-  <div class="portfolio-item">
-    <div class="portfolio-item-thumbnail">
-        <img src="image" alt="portfolio item thumb">
-    </div>
-    <h3 class="portfolio-item-title">project 1</h3>
-    <button type="button" class="btn view-project-btn">view project</button>
-    <div class="portfolio-item-details">
-        <div class="description">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, eos distinctio. Libero, sequi vitae. Cum similique ipsam autem excepturi sunt et veritatis. Unde, numquam! Quod voluptatibus cum voluptas pariatur, expedita voluptate accusamus nihil ab saepe placeat animi. Voluptatem, fugiat maxime!</p>
-        </div>
-        <div class="general-info">
-            <ul>
-                <li>Price: <span>0.01ETH</span></li>
-                <li>Quantity: <span>128</span></li>
-                <li>Royalties:<span>10.00</span></li>
-            </ul>
-        </div>
-    </div>
-   </div>
-   <!-- Projects Item End -->
-    <!-- Projects Item Start -->
-   <div class="portfolio-item">
-    <div class="portfolio-item-thumbnail">
-        <img src="image" alt="portfolio item thumb">
-    </div>
-    <h3 class="portfolio-item-title">project 2</h3>
-    <button type="button" class="btn view-project-btn">view project</button>
-    <div class="portfolio-item-details">
-        <div class="description">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, eos distinctio. Libero, sequi vitae. Cum similique ipsam autem excepturi sunt et veritatis. Unde, numquam! Quod voluptatibus cum voluptas pariatur, expedita voluptate accusamus nihil ab saepe placeat animi. Voluptatem, fugiat maxime!</p>
-        </div>
-        <div class="general-info">
-            <ul>
-                <li>Price: <span>0.01ETH</span></li>
-                <li>Quantity: <span>128</span></li>
-                <li>Royalties:<span>10.00</span></li>
-            </ul>
-        </div>
-    </div>
-   </div>
-   <!-- Projects Item End -->
-    <!-- Projects Item Start -->
-   <div class="portfolio-item">
-    <div class="portfolio-item-thumbnail">
-        <img src="image" alt="portfolio item thumb">
-    </div>
-    <h3 class="portfolio-item-title">project 3</h3>
-    <button type="button" class="btn view-project-btn">view project</button>
-    <div class="portfolio-item-details">
-        <div class="description">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, eos distinctio. Libero, sequi vitae. Cum similique ipsam autem excepturi sunt et veritatis. Unde, numquam! Quod voluptatibus cum voluptas pariatur, expedita voluptate accusamus nihil ab saepe placeat animi. Voluptatem, fugiat maxime!</p>
-        </div>
-        <div class="general-info">
-            <ul>
-                <li>Price: <span>0.01ETH</span></li>
-                <li>Quantity: <span>128</span></li>
-                <li>Royalties:<span>10.00</span></li>
-            </ul>
-        </div>
-    </div>
-   </div>
-   <!-- Projects Item End -->
-        </div>
-    </div>
- </section>
-   <!-- Projects Section End -->
+</section>
+<!-- Projects Section End -->
 <!-- Contact Section Start -->
 <section class="contact-section sec-padding" id="contact">
     <div class="container">
@@ -235,81 +141,86 @@
 <!-- Footer area -->
 <%- include('footer'); %>
 <!-- Main End -->
-<!-- Projects Item Details Popup Start -->
-<div class="portfolio-popup">
-   <div class="pp-inner">
-       <div class="pp-content">
-           <div class="pp-header">
-               <button type="button" class="btn pp-close"><i class="fa-solid fa-x"></i></button>
-             <div class="pp-thumbnail">
-               <img src="image" alt="pp-thumbnail">
-             </div> 
-             <h3>Project Title</h3>
-           </div>
-           <div class="pp-body">
-               <div class="portfolio-item-details">
-                   <div class="description">
-                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, eos distinctio. Libero, sequi vitae. Cum similique ipsam autem excepturi sunt et veritatis. Unde, numquam! Quod voluptatibus cum voluptas pariatur, expedita voluptate accusamus nihil ab saepe placeat animi. Voluptatem, fugiat maxime!</p>
-                   </div>
-                   <div class="general-info">
-                       <ul>
-                           <li>Price: <span>0.01ETH</span></li>
-                           <li>Quantity: <span>128</span></li>
-                           <li>Royalties:<span>10.00</span></li>
-                       </ul>
-                   </div>
-               </div>  
-           </div>
-       </div>
-   </div>
- </div>
+  <!-- Portfolio Item Details Popup -->
+  <div class="portfolio-popup">
+    <div class="pp-inner">
+        <div class="pp-content">
+            <div class="pp-header">
+                <button type="button" class="btn pp-close"><i class="bi bi-x"></i></button>
+              <div class="pp-thumbnail">
+                <img src="" alt="portfolio item thumb">
+            </div>
+            <h3 class="portfolio-item-title"></h3>
+            <div class="portfolio-item-details">
+                <div class="description">
+                    
+                </div>
+                <div class="general-info">
+                    <ul>
+                        <li>Price: ETH</li>
+                        <li>Quantity: </li>
+                        <li>Royalties: %</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Projects Item Details Popup End -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script type="module" src="./js/index.js"></script>
-<script type="module" src="https://unpkg.com/@splinetool/viewer@1.6.8/build/spline-viewer.js"></script>
-<script>
-   document.querySelector('.menu-toggle').addEventListener('click', () => {
-       document.querySelector('.menu').classList.toggle('active');
-   });
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.6.8/build/spline-viewer.js"></script>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.menu').classList.toggle('active');
+        });
 
-   // Creating bg balls
-   const container = document.querySelector('.floating-balls');
-   for (let i = 0; i < 20; i++) {
-       const ball = document.createElement('div');
-       ball.classList.add('ball');
-       container.appendChild(ball);
+        // Creating bg balls
+        const container = document.querySelector('.floating-balls');
+        for (let i = 0; i < 20; i++) {
+            const ball = document.createElement('div');
+            ball.classList.add('ball');
+            container.appendChild(ball);
 
-       // Randomizing positions and animation duration
-       ball.style.left = `${Math.random() * 100}vw`;
-       ball.style.top = `${Math.random() * 100}vh`;
-       ball.style.animationDuration = `${5 + Math.random() * 10}s`;
-       ball.style.animationDelay = `${Math.random() * 5}s`;
-   }
+            // Randomizing positions and animation duration
+            ball.style.left = `${Math.random() * 100}vw`;
+            ball.style.top = `${Math.random() * 100}vh`;
+            ball.style.animationDuration = `${5 + Math.random() * 10}s`;
+            ball.style.animationDelay = `${Math.random() * 5}s`;
+        }
+    </script>
+   <script>
+document.getElementById("contact-form").addEventListener("submit", async function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    const form = event.target;
+    const formData = new FormData(form);
+
+    const formObj = Object.fromEntries(formData.entries());
+
+    try {
+        const response = await fetch("/mail", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formObj)
+        });
+
+        if (response.ok) {
+            alert("Message sent successfully!");
+        } else {
+            const errorText = await response.text();
+            alert("Failed to send message: " + errorText);
+        }
+    } catch (error) {
+        console.error("Error sending message:", error);
+        alert("Failed to send message: " + error.message);
+    }
+});
 </script>
-<script>
-   document.getElementById('contact-form').addEventListener('submit', function(event) {
-       event.preventDefault();
 
-       const formData = new FormData(this);
-
-       fetch('/mail', {
-           method: 'POST',
-           body: JSON.stringify(Object.fromEntries(formData)),
-           headers: {
-               'Content-Type': 'application/json'
-           }
-       })
-       .then(response => response.text())
-       .then(result => {
-           alert(result);
-       })
-       .catch(error => {
-           console.error('Error:', error);
-           alert('Failed to send message. Please try again later.');
-       });
-   });
-</script>
 </body>
 </html>
